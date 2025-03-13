@@ -1,0 +1,77 @@
+# Prueba Técnica Infotegra
+
+## Descripción
+
+Se desarrolló una aplicación que consume la API de **Rick and Morty** para realizar las siguientes funcionalidades:
+
+- Consulta vía API.
+- Listar y paginar datos de la API.
+- Ver detalle de un personaje de la API.
+- Almacenar datos en una base de datos local.
+- Listar datos almacenados y paginar.
+- Editar registros.
+
+## Detalles Técnicos
+
+El desarrollo se realizó utilizando **Laravel** en su última versión (12.x), junto con **Livewire** y **Tailwind CSS**.
+
+### Requisitos
+
+- GIT
+- PHP 8.2
+- MySQL 8.0
+- Composer 2.x
+
+---
+
+## Pasos para Desplegar una Aplicación Laravel
+
+### 1. Clonar el Repositorio
+
+```bash
+git clone https://github.com/sebasroldanm/infotegra.git
+cd infotegra
+```
+### 2. Instalar Dependencias
+
+```bash
+composer install
+```
+
+### 3. Configurar el Archivo `.env`
+Copiar el archivo `.env.example` a `.env` y configura las variables de entorno necesarias:
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=<NAME_DB>
+DB_USERNAME=<USER_DB>
+DB_PASSWORD=<PASS_DB>
+```
+
+### 4. Generar la Clave de Aplicación
+
+```bash
+php artisan key:generate
+```
+
+### 5. Crear la Base de Datos
+
+```bash
+php artisan migrate
+```
+
+### 5. Crear directorio simbólico
+
+```bash
+php artisan storage:link
+```
+
+### 6.Iniciar el Servidor Local
+
+```bash
+php artisan serve
+```
+
+O desde el WebServer
