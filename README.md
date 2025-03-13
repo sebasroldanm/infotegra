@@ -24,7 +24,7 @@ El desarrollo se realizó utilizando **Laravel** en su última versión (12.x), 
 
 ---
 
-## Pasos para Desplegar una Aplicación Laravel
+## Pasos para Desplegar
 
 ### 1. Clonar el Repositorio
 
@@ -57,12 +57,20 @@ php artisan key:generate
 ```
 
 ### 5. Crear la Base de Datos
-
+Se debe tener una base de datos creada en MySQL y que esta se pueda conectar desde Laravel.
+Para este caso, existen dos formas:
+- Migraciones:
+  Ejecutar el comando para crear las tablas de acuerdo a las migraciones creadas, este proyecto no contiene Seeders.
 ```bash
 php artisan migrate
 ```
+- Desde archivo:
+  Se debe realizar la ejecución de la SQL en la base de datos previamente creada. 
+  _Nota: El archivo será compartido fuera del repositorio_
 
 ### 5. Crear directorio simbólico
+
+_(Opcional)_
 
 ```bash
 php artisan storage:link
@@ -70,8 +78,10 @@ php artisan storage:link
 
 ### 6.Iniciar el Servidor Local
 
+Usando el server que ofrece artisan
+
 ```bash
 php artisan serve
 ```
 
-O desde el WebServer
+O desde el WebServer _(Apache o Nginx)_
